@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.Toast
 
 class RegisterActivity : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
@@ -19,5 +20,13 @@ class RegisterActivity : AppCompatActivity() {
            val nxt = Intent(this, LoginActivity::class.java)
             startActivity(nxt)
         }
+
+        btn_register.setOnClickListener {
+            //Toast.makeText(applicationContext,"this is register activity",Toast.LENGTH_SHORT).show()
+            val msg = Toast.makeText(applicationContext,"Done",Toast.LENGTH_SHORT)
+            msg.show()
+
+        }
+
     }
 }
